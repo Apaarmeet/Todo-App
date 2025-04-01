@@ -9,12 +9,14 @@ export default function App() {
   const popup = useAppSelector(selectPopup);
 
   return (
-    <div className="h-svh bg-gray-300">
+    <div className="  bg-gray-300 min-h-screen flex">
+      <div className="flex-grow">
       <TopBar />
       <AnimatePresence>
         {popup && <CreateTodo />}
       </AnimatePresence>
-      <Todos/>    
+      <Todos/>
+      </div>    
     </div>
   );
 }
